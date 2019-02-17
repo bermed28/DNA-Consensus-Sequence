@@ -33,13 +33,13 @@ def count_nucl_freq(dataList):
         for rowIndex in dataList:
             letter= rowIndex[colCount] #indicates which column to loop through
             dataDict[letter]=dataDict.get(letter,0)+1 #counts the ocurrence of each caracter in the column and adds it to that columns dict
-            if rowIndex != 'A':
+            if letter != 'A':
                 dataDict['A'] = dataDict.get('A', 0)
-            if rowIndex != 'T':
+            if letter != 'T':
                 dataDict['T'] = dataDict.get('T', 0)
-            if rowIndex != 'C':
+            if letter != 'C':
                 dataDict['C'] = dataDict.get('C', 0)
-            if rowIndex != 'G':
+            if letter != 'G':
                 dataDict['G'] = dataDict.get('G', 0)
         countStruct.append(dataDict) #adds each columns dict to the list to construct the consensus string
         colCount = colCount+1 #index to move columns
